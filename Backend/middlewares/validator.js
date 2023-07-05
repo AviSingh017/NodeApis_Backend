@@ -8,7 +8,7 @@ const validatorMiddleware = (req, res, next) => {
     return res.status(400).send({ msg: "Username should be alphanumeric and between 6-12 characters." });
   }
   if(!passwordRegex.test(pass)){
-    return res.status(400).send({ msg: "Username should be alphanumeric and between 6-12 characters." });
+    return res.status(400).send({ msg: "Password should be alphanumeric with special characters with min length of 6 characters" });
   }
   next();
 };
